@@ -1,13 +1,3 @@
-def turn(board)
-  input_to_index(user_input)
-  if valid_move?(board, index)
-    move(board, index, current_player = "X")
-else
-  turn(board)
-end
-end
-
-
 
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -31,4 +21,13 @@ end
 
 def position_taken?(board, index)
   board[index] != " "
+end
+def turn(board)
+  input_to_index(user_input) 
+  if valid_move?(board, index) 
+    move(board, index, current_player = "X")
+    display_board(board)
+else
+  turn(board)
+end
 end

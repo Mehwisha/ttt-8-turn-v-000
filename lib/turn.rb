@@ -22,8 +22,7 @@ def position_taken?(board, index)
 end
 
 def turn(board)
-  user_input = gets.board
-  puts "Please enter 1-9:"
+
   if valid_move?(board, index)
     move(board, index, current_player = "X")
 else
